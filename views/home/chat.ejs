@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo WebSocket</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script-chat.js" defer ></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chat via socket.io</h1>
+    
+    <form id="login-form">
+        <label for="username">Pseudo : </label>
+        <input type="text" id="username" name="username">
+        <button type="submit">Se connecter</button>
+    </form>
+
+    <form id="message-form">
+        <label for="message">Message : </label>
+        <input type="text" id="message" name="message">
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <div id="container-chat"></div>
+
+</body>
+</html>

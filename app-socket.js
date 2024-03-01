@@ -13,6 +13,7 @@ const createIoServer = (httpServer) => {
     io.on('connection', (socket) => {
         console.log('Socket.io ready');
 
+        //* Intro
         // Attend l'event "sayHello" que le client va déclencher
         socket.on('sayHello', () => {
             console.log('Recive : sayHello');
@@ -22,6 +23,17 @@ const createIoServer = (httpServer) => {
             // - Autres params : les arguments
             io.emit('printHello', 'Hello World !');
 
+        });
+        
+
+        //* Chat
+        socket.on('sendMessage', (username, message) => {
+
+            // Envoyer le message à tous les clients (sauf l'emetteur du message)
+            socket.broadcast.emit('printMessage', `${username} : ${message}`);
+
+            // Envoyer uniquement à l'emetteur du message
+            socket.emit('printMessage', `> ${message}`);
         });
 
     });
