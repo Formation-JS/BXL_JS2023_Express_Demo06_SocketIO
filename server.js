@@ -3,11 +3,13 @@ require('dotenv').config();
 //! Imports
 const http = require('node:http');
 const app = require('./app-server');
+const createIoServer = require('./app-socket');
 
 //! Create Web server (+ Express)
 const server = http.createServer(app);
 
-//! TODO Add Socket.io 
+//! Ajout des WebSocket sur le serveur
+createIoServer(server);
 
 //? Start Web server
 const { PORT, NODE_ENV } = process.env;
