@@ -7,7 +7,6 @@ Site web de chat en temps réel avec les pages :
 ## Package
 **Web Server**
 - express
-- express-session
 - express-async-errors
 - ejs
 
