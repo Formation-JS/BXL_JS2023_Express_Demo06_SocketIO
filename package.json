@@ -1,0 +1,27 @@
+{
+  "name": "demo-express-06",
+  "version": "0.1.0",
+  "description": "Demo des SocketIO",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "SocketIO",
+    "NodeJS"
+  ],
+  "author": "Aurélien St",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-async-errors": "^3.1.1",
+    "express-session": "^1.18.0",
+    "socket.io": "^4.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
